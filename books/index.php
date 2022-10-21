@@ -19,7 +19,7 @@ $stmt = $pdo->query('SELECT * FROM books');
 </head>
 <body>
     <nav>
-        <a href="add_author.php>Lisa autor</a>
+        <a href="add_author.php">Lisa autor</a>
     </nav>
 
 
@@ -29,7 +29,7 @@ $stmt = $pdo->query('SELECT * FROM books');
    while ($row = $stmt->fetch())
 {
     $id = $row['id'];
-    $title = $row['id'];
+    $title = $row['title'];
 
     echo "<a href='books.php?id={$id}'>{$title}</a><br>";
 }

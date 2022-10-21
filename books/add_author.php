@@ -1,3 +1,22 @@
+<?php
+
+if ( isset($_POST['add-author'])) {
+
+require_once('connection.php');
+
+$firstName = $_POST['first-name'];
+$lastName = $_POST['first-name'];
+
+
+$stmt = $pdo->prepare('INSERT INTO authors (first_name, last_name) VALUES (:first_name, :last_name)');
+$stmt->execute(['first_name' => $firstName, 'last_name' => $lastName]);
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +30,12 @@
     
 <H1>Lisa autor</H1>
 <form action="add_author.php" method="post">
-        <input type="text" name="first-name" placeholder="eesnimi"">
+        <input type="text" name="first-name" placeholder="eesnimi">
         <br>
-        <input type="text" name="last-name" placeholder="perenimi"">
+        <input type="text" name="last-name" placeholder="perenimi">
         <br>
 
-        <input type="submit" value="lisa">
+        <input type="submit" name="add-author" value="Lisa">
     </form>
     
 
