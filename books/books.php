@@ -38,5 +38,13 @@ $book = $stmt->fetch();
         <p>Price - <?=str_replace('.',',',round($book['price'],2));?> - EUR</p>
         </div>
     </div>
+<br>
+<br>
+
+    <form action="delete.php" method="post">
+        <input type="hidden" name="book-id" value="<?=$id;?>">
+        <input type="submit" name="delete" value="Kustuta">
+    </form>
+
 </body>
 </html>
