@@ -1,6 +1,15 @@
 nav {
     margin-bottom: 36px;
+color: black;
+font-size: larger;
 }
 input {
     margin: 4px;
+}
+body {
+    display: flex;
+}
+h4 {
+    display: flex;
+    justify-content: flex-end;
 }

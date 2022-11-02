@@ -5,7 +5,7 @@ if ( isset($_POST['add-author'])) {
 require_once('connection.php');
 
 $firstName = $_POST['first-name'];
-$lastName = $_POST['first-name'];
+$lastName = $_POST['last-name'];
 
 
 $stmt = $pdo->prepare('INSERT INTO authors (first_name, last_name) VALUES (:first_name, :last_name)');
@@ -29,6 +29,9 @@ $stmt->execute(['first_name' => $firstName, 'last_name' => $lastName]);
 <body>
     
 <H1>Lisa autor</H1>
+<br>
+<br>
+
 <form action="add_author.php" method="post">
         <input type="text" name="first-name" placeholder="eesnimi">
         <br>

@@ -20,10 +20,14 @@ $stmt = $pdo->query('SELECT * FROM books');
 <body>
     <nav>
         <a href="add_author.php">Lisa autor</a>
+        <br>
+
     </nav>
 
 
 <main>
+<br>
+<br>
 
 <?php
    while ($row = $stmt->fetch())
