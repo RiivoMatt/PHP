@@ -1,5 +1,5 @@
 <?php
-var_dump($_POST);
+
 
 if ( isset($_POST['delete'])) {
 
@@ -13,5 +13,5 @@ $stmt->execute(['id' => $id]);
 
 }
 
-header('Location: ')
+header('Location: index.php')
 ?>

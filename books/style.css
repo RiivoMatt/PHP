@@ -13,3 +13,6 @@ h4 {
     display: flex;
     justify-content: flex-end;
 }
+form {
+    border: 1px solid black;
+}

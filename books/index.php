@@ -3,7 +3,7 @@
 
 require_once('connection.php');
 
-$stmt = $pdo->query('SELECT * FROM books');
+$stmt = $pdo->query('SELECT * FROM books WHERE is_deleted = 0');
 
 
 ?>
@@ -20,9 +20,7 @@ $stmt = $pdo->query('SELECT * FROM books');
 <body>
     <nav>
         <a href="add_author.php">Lisa autor</a>
-        <br>
-
-    </nav>
+       </nav>
 
 
 <main>
@@ -35,7 +33,7 @@ $stmt = $pdo->query('SELECT * FROM books');
     $id = $row['id'];
     $title = $row['title'];
 
-    echo "<a href='books.php?id={$id}'>{$title}</a><br>";
+    echo "<a href='book.php?id={$id}'>{$title}</a><br>";
 }
 
 ?>
